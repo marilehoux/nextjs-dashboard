@@ -1,4 +1,4 @@
 # nextjs-dashboard
-dashboard template in nextJs.
+dashboard template 
 for training
 ## stack next js vercel tailwindCss
