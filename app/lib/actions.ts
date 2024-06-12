@@ -89,8 +89,6 @@ export async function updateInvoice(id: string, formData: FormData) {
 	try {
 		await sql`DELETE FROM invoices WHERE id = ${id}`;
 		revalidatePath('/dashboard/invoices');
-		console.log ('invoice deleted')
-		return {message : "facture supprimée"} // ne sert à rien 
 
 	} catch (error) {
 		return { message: 'Database error: invoice not deleted' };
