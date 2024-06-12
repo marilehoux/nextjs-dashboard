@@ -9,7 +9,6 @@ import {
 } from '@heroicons/react/24/outline';
 import { Button } from '@/app/ui/button';
 import { createInvoice } from '@/app/lib/actions';
-import { useFormState } from 'react-dom';
 
 export default function Form({ customers }: { customers: CustomerField[] }) {
   const initialState = {message: null, errors: {}};
@@ -128,3 +127,7 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
     </form>
   );
 }
+function useFormState(createInvoice: (prevState: import("@/app/lib/actions").State, formData: FormData) => Promise<{ errors: { amount?: string[] | undefined; customerId?: string[] | undefined; status?: string[] | undefined; }; message: string; } | { message: string; errors?: undefined; }>, initialState: { message: null; errors: {}; }): [any, any] {
+  throw new Error('Function not implemented.');
+}
+
