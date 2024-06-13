@@ -9,6 +9,7 @@ import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import { Button } from './button';
 
 import { authenticate } from '@/app/lib/actions';
+import { useFormState } from 'react-dom';
 
 export default function LoginForm() {
   const [errorMessage, dispatch] = useFormState(authenticate, undefined);
@@ -90,7 +91,5 @@ function LoginButton() {
     </Button>
   );
 }
-function useFormState(authenticate: (prevState: string | undefined, formData: FormData) => Promise<"Invalid credentials." | "Something went wrong." | undefined>, undefined: undefined): [any, any] {
-  throw new Error('Function not implemented.');
-}
+
 
